@@ -1,23 +1,19 @@
- <!DOCTYPE html>
 <html>
-<head>
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-function initialize() {
-  var mapProp = {
-    center:new google.maps.LatLng(39.357616,-81.318261),
-    zoom:16,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-</head>
-
 <body>
-<div id="googleMap" style="width:500px;height:380px;"></div>
- <h1>Hello and more</h1>
+<p>Hello!</p>
+<p>Click the "Try it" button to get the text in the text field.</p>
+<input type="text" id="myText" value=""><br>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<p id="demo"></p>
+<script>
+function myFunction() {
+  var x = document.getElementById("myText").value;
+  var y = document.getElementById("demo").innerHTML;
+  var d = new Date();
+  document.getElementById("demo").innerHTML = y + '<br>' + d.toLocaleString() + " " + x;
+}
+</script>
+
 </body>
- 
-</html> 
+</html>
